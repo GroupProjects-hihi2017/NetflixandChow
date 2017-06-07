@@ -17,7 +17,7 @@
 - one page website
 - two buttons
 - one button to randomly generate a snack (from hardcoded data)
-- one button calls an external API to randomly generate a Netflix movie choice
+- one button calls an external API to randomly generate a Netflix movie choice (https://www.npmjs.com/package/netflix-roulette)
 
 #### Stretch
 - fun stuff with CSS
