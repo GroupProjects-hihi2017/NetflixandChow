@@ -7,6 +7,13 @@ export const receiveSnack = (snack) => {
   }
 }
 
+export const addNewSnack = (snack) => {
+  return {
+    type: 'ADD_NEW_SNACK',
+    snack
+  }
+}
+
 export function getSnack() {
   return (dispatch) => {
     request
@@ -17,6 +24,24 @@ export function getSnack() {
           return
         }
         dispatch(receiveSnack(res.body))
+      })
+  }
+}
+
+export function addSnack(snack) {
+  return (dispatch) => {
+    console.log({snack});
+    request
+      .post(`/api/snacks`)
+      .send(snack)
+      .end((err, res) => {
+        console.log("the response", res.body);
+        if (err) {
+          console.error(err.message)
+          return
+        }
+        snack.id = res.body
+        dispatch(addNewSnack(snack))
       })
   }
 }
