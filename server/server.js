@@ -5,6 +5,7 @@ const cors = require('cors')
 
 
 var movie = require('./routes/movie')
+var snacks = require('./routes/snacks')
 
 const corsOptions = {
   origin: true,
@@ -20,5 +21,6 @@ server.use(bodyParser.json())
 server.use(express.static(path.join(__dirname, '../public')))
 
 server.use('/api/movie', movie)
+server.use('/api/snacks', snacks)
 
 module.exports = server
