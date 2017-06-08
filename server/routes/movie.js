@@ -5,7 +5,7 @@ var router = express.Router()
 
 var NetflixRoulette = require('netflix-roulette')
 
-var actors = ['Brad Pitt', 'Leonardo Dicaprio', 'Anne Hathaway', 'Jennifer Lawrence']
+var actors = ['Brad Pitt', 'Leonardo Dicaprio', 'Anne Hathaway', 'Jennifer Lawrence', 'Jamie Foxx', 'Ryan Gosling', 'Meryl Streep', 'Emma Stone', 'Helen Mirren', 'Emma Watson', 'Halle Berry', 'Kerry Washington']
 
 router.get('/', (req, res) => {
   // db.getActors()
