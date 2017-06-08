@@ -6,8 +6,8 @@ import {getSnack} from '../actions/snack'
 const renderSnack = (snack, key) => (
   <div>
     <img className='snack-image' src={snack.image}/>
-    <h1 className='snack-name' key={key}>{snack.name}</h1>
-    <p className='snack-description' key={key}>Director: {snack.description}</p>
+    <h1 className='snack-name' key={key}>Snack: {snack.name}</h1>
+    <p className='snack-description' key={key}>Description: {snack.description}</p>
   </div>
 )
 
