@@ -5,6 +5,7 @@ var request = require('supertest')
 var app = require('../../../server/server.js')
 
 var configureDatabase = require('../helpers/database-config')
+
 configureDatabase(test, app)
 
 test.cb('GET /movie', t => {

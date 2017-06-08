@@ -12368,7 +12368,7 @@ var renderSnack = function renderSnack(snack, key) {
     null,
     _react2.default.createElement('img', { className: 'snack-image', src: snack.image }),
     _react2.default.createElement(
-      'h1',
+      'p',
       { className: 'snack-name', key: key },
       'Snack: ',
       snack.name
