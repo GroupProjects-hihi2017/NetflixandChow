@@ -1,7 +1,7 @@
-function movie (state = [], action) {
+function movie (state = {}, action) {
   switch (action.type) {
     case 'RECEIVE_MOVIE':
-      return [...action.movie]
+      return action.movie
     default:
       return state
   }
