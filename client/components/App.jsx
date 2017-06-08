@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Greetings from './Greetings'
+import Movie from './Movie'
 
 const App = () => (
   <div className='app-container'>
-    <Greetings />
+    <Movie />
   </div>
 )
 
