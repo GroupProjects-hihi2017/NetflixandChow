@@ -11036,7 +11036,7 @@ var _react = __webpack_require__(20);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Movie = __webpack_require__(235);
+var _Movie = __webpack_require__(102);
 
 var _Movie2 = _interopRequireDefault(_Movie);
 
@@ -11115,8 +11115,97 @@ thunk.withExtraArgument = createThunkMiddleware;
 exports['default'] = thunk;
 
 /***/ }),
-/* 101 */,
-/* 102 */,
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.receiveMovie = undefined;
+exports.getMovie = getMovie;
+
+var _superagent = __webpack_require__(227);
+
+var _superagent2 = _interopRequireDefault(_superagent);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var receiveMovie = exports.receiveMovie = function receiveMovie(movie) {
+  return {
+    type: 'RECEIVE_MOVIE',
+    movie: movie
+  };
+};
+
+function getMovie(movie) {
+  return function (dispatch) {
+    _superagent2.default.get('/api/movie').end(function (err, res) {
+      if (err) {
+        console.error(err.message);
+        return;
+      }
+      dispatch(receiveMovie(res.body));
+    });
+  };
+}
+
+/***/ }),
+/* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(20);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(55);
+
+var _movie = __webpack_require__(101);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var renderMovie = function renderMovie(movie, key) {
+  return _react2.default.createElement(
+    'h1',
+    { key: key },
+    movie.show_title
+  );
+};
+
+var Movie = function Movie(_ref) {
+  var movie = _ref.movie,
+      dispatch = _ref.dispatch;
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'button',
+      { onClick: function onClick() {
+          return dispatch((0, _movie.getMovie)());
+        } },
+      'Give me a movie!'
+    ),
+    renderMovie(movie)
+  );
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+  console.log(state);
+  return { movie: state.movie };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(Movie);
+
+/***/ }),
 /* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11169,16 +11258,14 @@ document.addEventListener('DOMContentLoaded', function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
 function movie() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments[1];
 
   switch (action.type) {
     case 'RECEIVE_MOVIE':
-      return [].concat(_toConsumableArray(action.movie));
+      console.log(action);
+      return action.movie;
     default:
       return state;
   }
@@ -26057,96 +26144,6 @@ module.exports = function(module) {
 	return module;
 };
 
-
-/***/ }),
-/* 234 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.receiveMovie = undefined;
-exports.getMovie = getMovie;
-
-var _superagent = __webpack_require__(227);
-
-var _superagent2 = _interopRequireDefault(_superagent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var receiveMovie = exports.receiveMovie = function receiveMovie(movie) {
-  return {
-    type: 'RECEIVE_MOVIE',
-    movie: movie
-  };
-};
-
-function getMovie(movie) {
-  return function (dispatch) {
-    _superagent2.default.get('/api/movie').end(function (err, res) {
-      if (err) {
-        console.error(err.message);
-        return;
-      }
-      dispatch(receiveMovie(res.body));
-    });
-  };
-}
-
-/***/ }),
-/* 235 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(20);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRedux = __webpack_require__(55);
-
-var _movie = __webpack_require__(234);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var renderMovie = function renderMovie(movie, key) {
-  return _react2.default.createElement(
-    'h1',
-    { key: key },
-    movie.show_title
-  );
-};
-
-var Movie = function Movie(_ref) {
-  var movie = _ref.movie,
-      dispatch = _ref.dispatch;
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      'button',
-      { onClick: function onClick() {
-          return dispatch((0, _movie.getMovie)());
-        } },
-      'Give me a movie!'
-    ),
-    movie.map(renderMovie)
-  );
-};
-
-var mapStateToProps = function mapStateToProps(state) {
-  return { movie: state.movie };
-};
-
-exports.default = (0, _reactRedux.connect)(mapStateToProps)(Movie);
 
 /***/ })
 /******/ ]);

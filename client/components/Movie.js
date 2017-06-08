@@ -10,11 +10,12 @@ const renderMovie = (movie, key) => (
 const Movie = ({movie, dispatch}) => (
   <div>
     <button onClick={() => dispatch(getMovie())}>Give me a movie!</button>
-    {movie.map(renderMovie)}
+    {renderMovie(movie)}
   </div>
 )
 
 const mapStateToProps = (state) => {
+  console.log(state)
 return {movie: state.movie}
 
 }
