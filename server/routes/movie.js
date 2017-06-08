@@ -5,7 +5,7 @@ var router = express.Router()
 
 var NetflixRoulette = require('netflix-roulette')
 
-var actors = ['Brad Pitt', 'Leonardo Dicaprio', 'Anne Hathaway', 'Jennifer Lawrence', 'Jamie Foxx', 'Ryan Gosling', 'Meryl Streep', 'Emma Stone', 'Helen Mirren', 'Emma Watson', 'Halle Berry', 'Kerry Washington']
+var actors = ['Brad Pitt', 'Leonardo Dicaprio', 'Anne Hathaway', 'Jennifer Lawrence', 'Jamie Foxx', 'Ryan Gosling', 'Meryl Streep', 'Emma Stone', 'Helen Mirren', 'Emma Watson', 'Halle Berry', 'Kerry Washington', 'Denzel Washington', 'Idris Elba', 'Dev Patel']
 
 router.get('/', (req, res) => {
   // db.getActors()
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 
   NetflixRoulette.actor(randomActor(actors), (error, data) => {
     let random = Math.round(Math.random() * data.length)
-    console.log({data: data.length, random});
+    // console.log({data: data.length, random});
     res.send(data[random])
   })
 
@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
 
 function randomActor(actors) {
   let random = Math.round(Math.random() * actors.length)
-  console.log(actors[random]);
+  // console.log(actors[random]);
   return actors[random]
 }
 
