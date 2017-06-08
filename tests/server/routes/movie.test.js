@@ -17,3 +17,33 @@ test.cb('GET /movie', t => {
       t.end()
     })
 })
+
+test.cb('Get/movie', t => {
+  request(t.context.app)
+  .get('/api/movie')
+  .expect(200)
+  .end((err,res) => {
+    t.deepEqual(Object.keys(res.body).show_title)
+    t.end()
+  })
+})
+
+test.cb('Get/movie', t => {
+  request(t.context.app)
+  .get('/api/movie')
+  .expect(200)
+  .end((err,res) => {
+    t.deepEqual(Object.keys(res.body).show_id)
+    t.end()
+  })
+})
+
+test.cb('Get/movie', t => {
+  request(t.context.app)
+  .get('/api/movie')
+  .expect(200)
+  .end((err,res) => {
+    t.deepEqual(Object.keys(res.body).show_cast)
+    t.end()
+  })
+})
