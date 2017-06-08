@@ -17,7 +17,7 @@ const renderMovie = (movie, key) => (
 
 const Movie = ({movie, dispatch}) => (
   <div>
-    <button onClick={() => dispatch(getMovie())}>Give me a movie!</button>
+    <button onClick={() => dispatch(getMovie())}>NETFLIX!</button>
     {renderMovie(movie)}
   </div>
 )
