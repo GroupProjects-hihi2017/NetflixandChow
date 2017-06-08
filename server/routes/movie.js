@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
   //   .then(actors => {
   //
   //   })
+
   NetflixRoulette.actor(randomActor(actors), (error, data) => {
     let random = Math.round(Math.random() * data.length)
     console.log({data: data.length, random});

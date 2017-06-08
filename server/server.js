@@ -3,7 +3,6 @@ var express = require('express')
 var bodyParser = require('body-parser')
 const cors = require('cors')
 
-
 var movie = require('./routes/movie')
 var snacks = require('./routes/snacks')
 
