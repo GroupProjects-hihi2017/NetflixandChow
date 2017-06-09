@@ -11,6 +11,8 @@
 #### More planning and efficient calls
 #### Vertical development
 #### Keep up morale!!!
+![Alt text](https://github.com/GroupProjects-hihi2017/NetflixandChow/blob/master/jetplanesarego.png)
+![Alt text](https://github.com/GroupProjects-hihi2017/NetflixandChow/blob/master/winnertakesall.jpg)
 
 ### PLOT
 #### MVP
