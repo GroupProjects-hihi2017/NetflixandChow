@@ -6,7 +6,7 @@ import {getSnack} from '../actions/snack'
 const renderSnack = (snack, key) => (
   <div className = 'snack-box'>
     <img className='snack-image' src={snack.image}/>
-    <p className='snack-name' key={key}>Snack: {snack.name}</p>
+    <h1 className='snack-name' key={key}>{snack.name}</h1>
     <p className='snack-description' key={key}>Description: {snack.description}</p>
   </div>
 )

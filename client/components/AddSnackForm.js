@@ -27,10 +27,10 @@ class AddSnackForm extends React.Component {
    render () {
      return (
        <div className='form'>
-           <input type='text' id='name' name='name' placeholder='Snack name' onChange={(e) => this.handleChange(e)} />
-           <input type='text' id='image' name='image' placeholder="image_url" onChange={(e) => this.handleChange(e)} />
-           <input type='text' name='description' placeholder="description" onChange={(e) => this.handleChange(e)} />
-           <input type='submit' id='submit' value='Submit' onClick={(e) => this.handleSubmit(e)} />
+          <p><input type='text' id='name' name='name' placeholder='Snack name' onChange={(e) => this.handleChange(e)} /></p>
+           <p><input type='text' id='image' name='image' placeholder="image_url" onChange={(e) => this.handleChange(e)} /></p>
+           <p><input type='text' name='description' placeholder="description" onChange={(e) => this.handleChange(e)} /></p>
+           <p><input type='submit' id='submit' value='Submit' onClick={(e) => this.handleSubmit(e)} /></p>
        </div>
      )}
  }

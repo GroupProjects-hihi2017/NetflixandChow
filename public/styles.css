@@ -66,6 +66,7 @@ body {
 .disclaimer-text {
   font-family: 'Open sans', sans-serif;
   font-style: italic;
+  color: white;
 }
 
 .footer {
@@ -77,14 +78,17 @@ body {
 
 .movie-box {
   text-align: center;
+  padding-left: 25px;
 }
 
 .movie-title {
-
+  padding-top: 20px;
+  color: white;
 }
 
 .movie-details {
-
+  color: white;
+  font-size: 1.5em;
 }
 
 .movie-poster {
@@ -99,18 +103,30 @@ body {
 
 .snack-box {
   text-align: center;
+  color: white;
+
+  padding-right: 25px;
 }
 
 .snack-name {
   margin: auto;
+  padding-top: 20px;
 }
 
 .snack-description {
-
+  padding-top: 20px;
+  font-size: 1.5em;
 }
 
 .snack-image {
   height: 350px;
   width: auto;
     border-style: inset;
+}
+
+/* FORM */
+
+.form p {
+text-align: center;
+padding-bottom: 0px;
 }
