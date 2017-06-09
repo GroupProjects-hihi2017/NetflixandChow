@@ -11,7 +11,7 @@
 #### More planning and efficient calls
 #### Vertical development
 #### Keep up morale!!!
-![picture](NetflixandChow/Image uploaded from iOS.jpg)
+![Alt text](NetflixandChow/Image uploaded from iOS.jpg)
 
 ### PLOT
 #### MVP
