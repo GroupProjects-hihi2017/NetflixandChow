@@ -19,6 +19,7 @@ body {
   margin: auto;
   background: black;
   max-width: 1260px !important;
+  height: 100vh;
 }
 
 .button-div {
