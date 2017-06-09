@@ -11,7 +11,7 @@
 #### More planning and efficient calls
 #### Vertical development
 #### Keep up morale!!!
-![Alt text](NetflixandChow/Image uploaded from iOS.jpg)
+![Alt text](https://github.com/GroupProjects-hihi2017/NetflixandChow/blob/master/Image%20uploaded%20from%20iOS.jpg)
 
 ### PLOT
 #### MVP
