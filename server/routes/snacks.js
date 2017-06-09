@@ -21,6 +21,15 @@ router.get('/', (req, res) => {
     })
 })
 
+router.post('/', (req,res) => {
+  let db = req.app.get('db')
+  let snack = req.body
+  snacksDB.addSnack(snack, db)
+    .then(response => {
+      res.json(response[0])
 
+    })
+
+})
 
 module.exports = router

@@ -7,6 +7,8 @@ export const receiveMovie = (movie) => {
   }
 }
 
+
+
 export function getMovie (movie) {
   return (dispatch) => {
     request

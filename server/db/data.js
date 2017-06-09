@@ -3,6 +3,11 @@ const getSnacks = (db) => {
     .select('*')
 }
 
+const addSnack = (snack, db) => {
+  return db('snacks').insert(snack)
+}
+
 module.exports = {
-  getSnacks
+  getSnacks,
+  addSnack
 }
