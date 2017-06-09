@@ -2,7 +2,8 @@ import React from 'react'
 
 const Header = () => (
   <div className='header'>
-    <h1>NETFLIX AND CHOW</h1>
+    <p className="inbetweeners">The Inbetweeners Present...</p>
+    <p className='header-text'>NETFLIX AND CHOW</p>
   </div>
 )
 

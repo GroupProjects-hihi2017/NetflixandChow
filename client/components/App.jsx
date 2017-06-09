@@ -6,12 +6,14 @@ import Header from './Header'
 import Footer from './Footer'
 
 const App = () => (
-  <div className='app-container'>
+  <div className='app-container container '>
+
     <div className='row'>
       <div className='twelve columns'>
         <Header />
       </div>
     </div>
+
     <div className="row">
       <div className = "six columns">
         <Movie />
@@ -20,11 +22,13 @@ const App = () => (
         <Snack />
       </div>
     </div>
+
       <div className='row'>
         <div className='twelve columns'>
           <Footer />
         </div>
       </div>
+
   </div>
 )
 

@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Forgotten-Futurist-Shadow';
+    src:url('Forgotten-Futurist-Shadow.ttf.woff') format('woff'),
+        url('Forgotten-Futurist-Shadow.ttf.svg#Forgotten-Futurist-Shadow') format('svg'),
+        url('Forgotten-Futurist-Shadow.ttf.eot'),
+        url('Forgotten-Futurist-Shadow.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: bold;
+}
+
+body {
+  background-image: url('http://blog.katescarlata.com/wp-content/uploads/2016/02/popcorn.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.app-container {
+  margin: auto;
+  background: black;
+  max-width: 1260px !important;
+}
+
+.button-div {
+  display: flex;
+  padding: 3em;
+  font-size: 25px;
+}
+
+.button-div .button {
+    font-family: 'Forgotten-Futurist-Shadow';
+    font-size: 50px;
+    color: white;
+    margin: auto;
+    border: none;
+    padding: 20px;
+}
+
+.header {
+  text-align: center;
+  background-color: #B9090B;
+  margin-bottom: 1em;
+}
+
+.header-text {
+  font-family: 'Forgotten-Futurist-Shadow';
+  color: black;
+  font-size: 100px;
+}
+
+.inbetweeners {
+  font-family: 'Open sans', sans-serif;
+  font-size: 30px;
+  font-style: italic;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 20px;
+  color: black;
+}
+
+.disclaimer {
+  color: red;
+  font-style: bold !important;
+}
+
+.disclaimer-text {
+  font-family: 'Open sans', sans-serif;
+  font-style: italic;
+}
+
+.footer {
+  text-align: center;
+  margin: 4em 0em;
+}
+
+/* MOVIE */
+
+.movie-box {
+  text-align: center;
+}
+
+.movie-title {
+
+}
+
+.movie-details {
+
+}
+
+.movie-poster {
+  height: 350px;
+  width: auto;
+  max-width: 300px;
+  border-style: inset;
+}
+
+
+/* SNACK */
+
+.snack-box {
+  text-align: center;
+}
+
+.snack-name {
+  margin: auto;
+}
+
+.snack-description {
+
+}
+
+.snack-image {
+  height: 350px;
+  width: auto;
+    border-style: inset;
+}
