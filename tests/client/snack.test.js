@@ -13,7 +13,7 @@ App.prototype.componentDidMount = () => {}
 
 test('The header renders on home page', t =>  {
   const wrapper = shallow(<Header store={store}/>)
-  t.is(wrapper.find('h1').text(),'NETFLIX AND CHOW')
+  t.is(wrapper.find('.header-text').text(),'NETFLIX AND CHOW')
 })
 
 test('The footer renders on home page', t =>  {
@@ -23,5 +23,5 @@ test('The footer renders on home page', t =>  {
 
 test('Snack component renders a snack', t => {
   const wrapper = mount(<Snack store={store} />)
-  t.is(wrapper.find('.snack-image').exists(), true)
+  t.is(wrapper.find('.button-div').exists(), true)
 })

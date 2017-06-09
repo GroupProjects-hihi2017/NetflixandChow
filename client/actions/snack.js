@@ -30,12 +30,10 @@ export function getSnack() {
 
 export function addSnack(snack) {
   return (dispatch) => {
-    console.log({snack});
     request
       .post(`/api/snacks`)
       .send(snack)
       .end((err, res) => {
-        console.log("the response", res.body);
         if (err) {
           console.error(err.message)
           return

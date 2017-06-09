@@ -11,15 +11,5 @@ App.prototype.componentDidMount = () => {}
 
 test('Netflix component renders a movie/show', t => {
   const wrapper = mount(<Movie store={store} />)
-  t.is(wrapper.find('.movie-title').exists(), true)
-})
-
-test('Netflix component renders a movie/show', t => {
-  const wrapper = mount(<Movie store={store} />)
-  t.is(wrapper.find('.movie-director').exists(), true)
-})
-
-test('Netflix component renders a movie/show', t => {
-  const wrapper = mount(<Movie store={store} />)
-  t.is(wrapper.find('.movie-summary').exists(), true)
+  t.is(wrapper.find('.button-div').exists(), true)
 })

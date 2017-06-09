@@ -13,7 +13,6 @@ class AddSnackForm extends React.Component {
 
    handleSubmit(e) {
      e.preventDefault()
-     console.log('submitting snack');
      this.props.dispatch(addSnack(this.state.snack))
    }
 
@@ -21,7 +20,6 @@ class AddSnackForm extends React.Component {
      let snack = this.state.snack
      snack[e.target.name] = e.target.value
      this.setState({snack})
-    console.log(this.state.snack);
    }
 
    render () {
