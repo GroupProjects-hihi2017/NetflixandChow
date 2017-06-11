@@ -22,7 +22,7 @@ class AddSnackForm extends React.Component {
      this.setState({snack})
    }
 
-   render () {
+   render () { //alan said make your p tags in line
      return (
        <div className='form'>
           <p><input type='text' id='name' name='name' placeholder='Snack name' onChange={(e) => this.handleChange(e)} /></p>
@@ -33,7 +33,7 @@ class AddSnackForm extends React.Component {
      )}
  }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => { //alan : indentation wasn't properly
 return {snack: state.snack}
 
 }

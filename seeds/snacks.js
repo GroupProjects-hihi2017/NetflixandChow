@@ -1,4 +1,4 @@
-exports.seed = function(knex, Promise) {
+exports.seed = function(knex, Promise) { // don't need to insert id because your id is auto incremented
   // Deletes ALL existing entries
   return knex('snacks').del()
     .then(function () {
