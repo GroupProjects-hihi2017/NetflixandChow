@@ -8,6 +8,22 @@ var configureDatabase = require('../helpers/database-config')
 
 configureDatabase(test, app)
 
+// Could have these tests inside one block of code
+// eg
+
+// test.cb('GET /movie', t => {
+//   request(t.context.app)
+//     .get('/api/movie')
+//     .expect(200)
+//     .end((err,res) => {
+//       t.deepEqual(Object.keys(res.body).length, 12)
+//       t.deepEqual(Object.keys(res.body).show_title)
+//       t.deepEqual(Object.keys(res.body).show_id)
+//       t.deepEqual(Object.keys(res.body).show_cast)
+//       t.end()
+//     })
+// })
+
 test.cb('GET /movie', t => {
   request(t.context.app)
     .get('/api/movie')
